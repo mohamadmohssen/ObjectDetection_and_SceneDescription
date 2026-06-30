@@ -4,9 +4,9 @@ import sys
 FOURCC_MJPG = cv2.VideoWriter_fourcc(*'MJPG')
 FOURCC_YUYV = cv2.VideoWriter_fourcc(*'YUYV')
 
-BRIO_W   = 1920 
-BRIO_H   =  1080
-BRIO_FPS =   30
+CAM_W   = 1920 
+CAM_H   =  1080
+CAM_FPS =   30
 
 FALLBACK_MODES = [
     (FOURCC_MJPG, 1920, 1080, 60),
@@ -54,9 +54,9 @@ def _platform_backend():
 
 def open_camera(
     index:         int = 0,
-    preferred_w:   int = BRIO_W,
-    preferred_h:   int = BRIO_H,
-    preferred_fps: int = BRIO_FPS,
+    preferred_w:   int = CAM_W,
+    preferred_h:   int = CAM_H,
+    preferred_fps: int = CAM_FPS,
 ) -> tuple[cv2.VideoCapture, int, int, float]:
    
     cap = cv2.VideoCapture(index, _platform_backend())
