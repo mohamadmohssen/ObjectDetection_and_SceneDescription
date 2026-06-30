@@ -94,10 +94,8 @@ def _put_text_pil(img, text, cx, cy, font_size=30, color=(255, 255, 255)):
 
 
 def _letterbox(frame: np.ndarray, target_w: int, target_h: int) -> np.ndarray:
-    """
-    Scale 'frame' to fit inside a (target_w × target_h) canvas while
-    keeping the original aspect ratio.  Empty space is filled with black.
-    """
+    #Scale 'frame' to fit inside a (target_w × target_h) canvas while keeping the original aspect ratio. Empty space is filled with black.
+
     src_h, src_w = frame.shape[:2]
 
     if src_w == 0 or src_h == 0:
