@@ -55,6 +55,22 @@ python main.py
 The first time you run it, the YOLO weight files (yolov8m.pt and yolov8m-seg.pt)
 will download automatically. After that they're saved locally and won't download again.
 
+## Attribution
+
+This project is based on the open-source project **YOLO Dense Captioning** by Moulesh GS:
+
+https://github.com/mouleshgs/yolo-dense-captioning
+
+This repository adapts and extends the original implementation by adding:
+
+- An updated user interface
+- YOLO segmentation
+- Prompts for Llama
+- Tracker (objects counter)
+- Camera settings
+
+The original project provided the foundation for the object detection, image captioning and LLM pipeline used in this work.
+
 ## Controls
 
 - Click the [DET]/[SEG] button (top left) — switch between object detection and segmentation
