@@ -4,6 +4,22 @@ A live camera app that detects objects (YOLO), writes a caption for the scene (G
 then rewrites that caption in a chosen personality style (funny, serious, coach, etc.)
 using a local LLM through Ollama.
 
+## Attribution
+
+This project is based on the open-source project **YOLO Dense Captioning** by Moulesh GS:
+
+https://github.com/mouleshgs/yolo-dense-captioning
+
+This repository adapts and extends the original implementation by adding:
+
+- An updated user interface
+- YOLO segmentation
+- Prompts for Llama
+- Tracker (objects counter)
+- Camera settings
+
+The original project provided the foundation for the object detection, image captioning and LLM pipeline used in this work.
+
 ## What you need before you start
 
 1. Python 3.10+ installed
@@ -55,21 +71,6 @@ python main.py
 The first time you run it, the YOLO weight files (yolov8m.pt and yolov8m-seg.pt)
 will download automatically. After that they're saved locally and won't download again.
 
-## Attribution
-
-This project is based on the open-source project **YOLO Dense Captioning** by Moulesh GS:
-
-https://github.com/mouleshgs/yolo-dense-captioning
-
-This repository adapts and extends the original implementation by adding:
-
-- An updated user interface
-- YOLO segmentation
-- Prompts for Llama
-- Tracker (objects counter)
-- Camera settings
-
-The original project provided the foundation for the object detection, image captioning and LLM pipeline used in this work.
 
 ## Controls
 
